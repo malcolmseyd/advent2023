@@ -11,9 +11,22 @@ T nxt() {
   return x;
 }
 
-int main() {
-  string line;
-  ll sum = 0;
-  while (getline(cin, line)) {
+#ifndef NDEBUG
+#define DEBUG(args...) (cout << format(args))
+#else
+#define DEBUG(...) 0
+#endif
+
+struct Solution {
+  auto solve() {
+    string line;
+    while (getline(cin, line)) {
+      lines.push_back(line);
+    }
+    DEBUG("{} {}\n", 1, 2);
+    return "TODO";
   }
-}
+  vector<string> lines;
+};
+
+int main() { cout << Solution().solve() << endl; }
